@@ -7,6 +7,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FC.Persistence", "FC.Persis
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FC.WebApp", "FC.WebApp\FC.WebApp.csproj", "{6D9CF82B-D76F-4DCE-9D19-D9C567C332AD}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{010EBBCB-94EE-4080-8DAA-D6DDD355D74B}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FC.WebApp2", "FC.WebApp2\FC.WebApp2.csproj", "{07CF2D5A-385A-49D1-8B5B-B242BAA8D0AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FC.Core.Tests", "FC.Core.Tests\FC.Core.Tests.csproj", "{113BE8C3-AADB-4DEA-9B77-925EEE5CC44A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +36,14 @@ Global
 		{6D9CF82B-D76F-4DCE-9D19-D9C567C332AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D9CF82B-D76F-4DCE-9D19-D9C567C332AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D9CF82B-D76F-4DCE-9D19-D9C567C332AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07CF2D5A-385A-49D1-8B5B-B242BAA8D0AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07CF2D5A-385A-49D1-8B5B-B242BAA8D0AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07CF2D5A-385A-49D1-8B5B-B242BAA8D0AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07CF2D5A-385A-49D1-8B5B-B242BAA8D0AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{113BE8C3-AADB-4DEA-9B77-925EEE5CC44A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{113BE8C3-AADB-4DEA-9B77-925EEE5CC44A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{113BE8C3-AADB-4DEA-9B77-925EEE5CC44A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{113BE8C3-AADB-4DEA-9B77-925EEE5CC44A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

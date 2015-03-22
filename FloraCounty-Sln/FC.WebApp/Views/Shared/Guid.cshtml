@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Guid";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Guid</h2>
+@{
+    var guid = @Guid.NewGuid().ToString();
+}
+<table>
+    <tr>
+        <td>Guid : </td>
+        <td>@guid</td>
+    </tr>
+    <tr>
+        <td>Guid : </td>
+        <td>@guid.Replace("-", "")</td>
+    </tr>
+</table>

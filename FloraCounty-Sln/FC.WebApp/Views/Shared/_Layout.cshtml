@@ -1,0 +1,41 @@
+﻿@using FC.Core
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Test</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    @*@Styles.Render("~/Content/css")*@
+    @*@Scripts.Render("~/bundles/modernizr")*@
+</head>
+<body>
+    <header>
+        <div class="content-wrapper">
+            <div class="float-left">
+                <p class="site-title"><a href="/">
+                    <img src="@FCSettings.Current.CDNPath/img/logo.jpg" alt="Explo Travel" width="277" height="68" /></a></p>
+            </div>
+            <div class="float-right">
+                <section id="login">
+                    @Html.Partial("_LoginPartial")
+                </section>
+            </div>
+        </div>
+    </header>
+    <div id="body">
+        @RenderSection("featured", required: false)
+        <section class="content-wrapper main-content clear-fix">
+            @RenderBody()
+        </section>
+    </div>
+    <footer>
+        <div class="content-wrapper">
+            <div class="float-left">
+                <p>&copy; @DateTime.Now.Year - Extreme Content Management System</p>
+            </div>
+        </div>
+    </footer>
+</body>
+<!--Powered by ExtremeCMS, on @Server.MachineName - @(Request.ServerVariables.Get("LOCAL_ADDR").Split(new char[]{'.'}).Length>3?Request.ServerVariables.Get("LOCAL_ADDR").Split(new char[]{'.'})[3]:Request.ServerVariables.Get("LOCAL_ADDR")) - @Request.ServerVariables["SERVER_PORT"] -->
+</html>

@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Welcome to Extreme Content Management System (ECMS)";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title</h1>
+            </hgroup>
+        </div>
+    </section>
+}
+<h3>Getting Started:</h3>
+<ol class="round">
+    <li class="one">
+        <h5>Url Management</h5>
+        Start by adding some url. Keep them inactive till you are preparing a page. Once done just activate it.
+        Add new url, Edit existing ones, apply filter* on the grid columns, navigate page by page in list of urls.        
+        <a href="/admin/urls/">Go to Url Grid...</a>
+    </li>
+    <li class="two">
+        <h5>View Html Management</h5>
+        ECMS is a View based system. View is generally a template, which contains html markup, dynamic tokens or expressions & 
+        Helper methods to pull data from different sources. Hardcoding content directly in view is a strict no-no.
+        Each view has two mode, Preview & Publish.
+        <a href="/admin/ecmsview/">Go to View Html Management...</a>
+    </li>
+    <li class="three">
+        <h5>View Data Management</h5>
+        Data can be consider as Title, keywords, description or any content you want to display on page.Data is passed to view when any one request a url. 
+        View displays your content using dynamic tokens or expressions. Data can sometime also contains dynamic tokens.
+        <a href="/admin/ecmsview/">Go to View Data Management...</a>
+    </li>
+</ol>
+<div class="content-wrapper">
+    *A couple of filters are not fully operational in this version. e.g contains & does not contains
+</div>

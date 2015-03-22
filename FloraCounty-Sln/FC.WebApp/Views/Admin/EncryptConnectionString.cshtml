@@ -1,0 +1,14 @@
+﻿@using ECMS.Services
+@using System.Configuration
+@{
+    ViewBag.Title = "EncryptDecrypt";
+}
+@{
+    var encryptedval = SecurityHelper.Encrypt(ConfigurationManager.ConnectionStrings["mongodb"].ConnectionString, true);
+
+    var decyptedVal = SecurityHelper.Decrypt(encryptedval, true);
+    
+    <h2>@encryptedval</h2>
+    <h2>@decyptedVal</h2>
+}
+
