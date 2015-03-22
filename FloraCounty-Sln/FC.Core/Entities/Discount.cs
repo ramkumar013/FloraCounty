@@ -1,13 +1,13 @@
-﻿using System;
+﻿using FC.Core.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FC.Core.Interfaces
+namespace FC.Core.Entities
 {
-    interface IProduct
+    class Discount : IDiscount
     {
-
     }
 }

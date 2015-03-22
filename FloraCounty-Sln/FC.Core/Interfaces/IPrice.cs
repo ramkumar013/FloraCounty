@@ -1,13 +1,12 @@
-﻿using FC.Core.Interfaces;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FC.Core.Entities
+namespace FC.Core.Interfaces
 {
-    class FCBouquet : IFCProduct
+    interface IPrice
     {
     }
 }

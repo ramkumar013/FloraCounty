@@ -50,11 +50,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DependencyManager.cs" />
-    <Compile Include="Entities\FCBouquet.cs" />
+    <Compile Include="Entities\Discount.cs" />
+    <Compile Include="Entities\PriceDetail.cs" />
+    <Compile Include="Entities\Bouquet.cs" />
+    <Compile Include="Entities\Shipping.cs" />
     <Compile Include="FCExtensions.cs" />
     <Compile Include="FCSettings.cs" />
     <Compile Include="Interfaces\ICachingService.cs" />
+    <Compile Include="Interfaces\IDiscount.cs" />
     <Compile Include="Interfaces\IFCProduct.cs" />
+    <Compile Include="Interfaces\IMerchant.cs" />
+    <Compile Include="Interfaces\IPrice.cs" />
+    <Compile Include="Interfaces\IProductDescription.cs" />
+    <Compile Include="Interfaces\IShipping.cs" />
     <Compile Include="Utility.cs" />
     <Compile Include="Interfaces\IPersistence.cs" />
     <Compile Include="MergeExtensions.cs" />

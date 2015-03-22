@@ -72,7 +72,6 @@ namespace FC.Core
                     setting.PortalHostName = Convert.ToString(ds.Tables["configuration"].Rows[0]["PortalHostName"]);
                     setting.XmlSitemapRefreshFrequency = Convert.ToInt32(ds.Tables["configuration"].Rows[0]["XmlSitemapRefreshFrequency"]);
                     setting.SiteId = Convert.ToInt32(dirInfo_.Name);
-                    setting.LoadDomainData();
                 }
             }
             catch (Exception ex)
@@ -83,26 +82,6 @@ namespace FC.Core
             return setting;
         }
 
-        private void LoadDomainData()
-        {
-            DomainData = new DataSet();
-            DomainData.Tables.Add(LoadCityLocationsTable());
-        }
-
-        private DataTable LoadCityLocationsTable()
-        {
-            DataTable table = new DataTable();
-            table.TableName = "CityLocations";
-            table.Columns.Add("CityName");
-            table.Columns.Add("CityCode");
-            table.Columns.Add("StateCountyCode");
-            table.Columns.Add("CountryCode");
-            table.Columns.Add("Latitude");
-            table.Columns.Add("Longitude");
-            table.Columns.Add("RegionCode");
-            table.Rows.Add(new object[] { "New York City", "NYC", "NY", "US", "-1", "-1" });
-            return table;
-        }
         #endregion
 
         /// <summary>

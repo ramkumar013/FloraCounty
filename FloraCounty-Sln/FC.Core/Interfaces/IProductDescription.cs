@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace FC.Core.Interfaces
 {
-    interface IProduct
+    interface IProductDescription
     {
-
     }
 }
