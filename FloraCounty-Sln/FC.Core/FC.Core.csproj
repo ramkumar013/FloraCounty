@@ -30,8 +30,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\packages\NLog.3.2.0.0\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog.Interface">
+      <HintPath>..\packages\NLog.Interface.3.2.1\lib\net40\NLog.Interface.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -39,11 +49,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DependencyManager.cs" />
+    <Compile Include="Entities\FCBouquet.cs" />
+    <Compile Include="FCExtensions.cs" />
+    <Compile Include="FCSettings.cs" />
+    <Compile Include="Interfaces\ICachingService.cs" />
+    <Compile Include="Interfaces\IFCProduct.cs" />
+    <Compile Include="Utility.cs" />
     <Compile Include="Interfaces\IPersistence.cs" />
+    <Compile Include="MergeExtensions.cs" />
+    <Compile Include="MergeOptions.cs" />
+    <Compile Include="MergeOptionsArrayHandling.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Entities\" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
