@@ -314,7 +314,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
-    <Content Include="Views\1\FC-Error-Handler.cshtml" />
+    <Content Include="Views\0\FC-Error-Handler.cshtml" />
     <Content Include="Views\Shared\FC-Error-Handler.cshtml" />
   </ItemGroup>
   <ItemGroup>

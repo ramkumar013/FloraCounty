@@ -11,8 +11,8 @@ namespace FC.Core.Utilities
     {
         public static int GetSiteId(string host)
         {
-            var settings = FCSettings.CMSSettingsList.Values.ToList();
-            foreach (KeyValuePair<int, FCSettings> pair in FCSettings.CMSSettingsList)
+            var settings = FCSettings.FCSettingsList.Values.ToList();
+            foreach (KeyValuePair<int, FCSettings> pair in FCSettings.FCSettingsList)
             {
                 if (pair.Value.HostAliases.Split(new char[] { ',' }).Any(x => x == host))
                 {

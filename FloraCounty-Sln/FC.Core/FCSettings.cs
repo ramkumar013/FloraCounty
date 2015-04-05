@@ -22,7 +22,7 @@ namespace FC.Core
         #endregion
 
         #region Static Properties
-        public static Dictionary<int, FCSettings> CMSSettingsList { get; set; }
+        public static Dictionary<int, FCSettings> FCSettingsList { get; set; }
         #endregion
 
         #region Instance Properties
@@ -32,7 +32,6 @@ namespace FC.Core
         public int SiteId { get; set; }
         public string PortalHostName { get; set; }
         public int XmlSitemapRefreshFrequency { get; set; }
-        public string DefaultURLRewriteAction = "/Template/Compose";
         public DataSet DomainData { get; set; }
         private static Logger _logger = LogManager.GetCurrentClassLogger();
         #endregion
@@ -49,12 +48,12 @@ namespace FC.Core
         public static void BeginLoadAppSettings()
         {
             //TODO: expose this method on http.
-            CMSSettingsList = new Dictionary<int, FCSettings>();
+            FCSettingsList = new Dictionary<int, FCSettings>();
             string[] dirinfo = Directory.GetDirectories(AppDomain.CurrentDomain.BaseDirectory + "\\configs");
             foreach (string dir in dirinfo)
             {
                 DirectoryInfo dirInfo = new DirectoryInfo(dir);
-                CMSSettingsList.Add(Convert.ToInt32(dirInfo.Name), LoadAppSettings(dirInfo));
+                FCSettingsList.Add(Convert.ToInt32(dirInfo.Name), LoadAppSettings(dirInfo));
             }
         }
 
@@ -93,7 +92,7 @@ namespace FC.Core
             {
                 if (HttpContext.Current != null && HttpContext.Current.Items["SiteId"] != null)
                 {
-                    return CMSSettingsList[Convert.ToInt32(HttpContext.Current.Items["SiteId"])];
+                    return FCSettingsList[Convert.ToInt32(HttpContext.Current.Items["SiteId"])];
                 }
                 else
                 {
@@ -104,7 +103,7 @@ namespace FC.Core
 
         public static FCSettings GetCurrentBySiteId(int siteId_)
         {
-            return CMSSettingsList[siteId_];
+            return FCSettingsList[siteId_];
         }
         
     }
