@@ -8,11 +8,26 @@ using System.Web;
 using System.Web.Mvc;
 using FC.Core.Helper;
 using FC.Core;
-namespace FC.WebApp
+namespace FC.WebApp.AppCode
 {
     public class BaseController : Controller
     {
+        public string GetView()
+        {
+            return "~/Views/.cshtml";
+        }
 
+        public string GetErrorHandlerView()
+        {
+            if (GetSiteIdFromContext() > -1)
+            {
+                return "~/Views/" + GetSiteIdFromContext() + "/FC-Error-Handler.cshtml";
+            }
+            else
+            {
+                return "~/Views/Shared/FC-Error-Handler.cshtml";
+            }
+        }
         public int GetSiteIdFromContext()
         {
             return Convert.ToInt32(ControllerContext.HttpContext.Items["SiteId"]);

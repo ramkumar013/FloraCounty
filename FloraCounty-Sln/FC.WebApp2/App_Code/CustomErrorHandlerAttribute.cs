@@ -5,7 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace ECMS.WebV2.AppCode
+namespace FC.WebApp.AppCode
 {
     public class CustomErrorHandlerAttribute : HandleErrorAttribute
     {

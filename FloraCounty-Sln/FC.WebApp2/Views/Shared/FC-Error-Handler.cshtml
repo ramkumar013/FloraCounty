@@ -1,0 +1,33 @@
+﻿@using FC.WebApp.AppCode
+
+@{
+    ViewBag.Title = "FC-Error-Handler";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+@{
+    if (ViewData.Model != null)
+    {
+        if (((System.Web.Mvc.HandleErrorInfo)ViewData.Model).Exception is HttpException)
+        {
+            var httpEx = ((System.Web.Mvc.HandleErrorInfo)ViewData.Model).Exception as HttpException;
+    <h2>@httpEx.GetHttpCode()</h2>
+            switch (@httpEx.GetHttpCode())
+            {
+                case 404:
+    <span>Sorry, the webpage you are looking for doesn't exist on this site !!!</span>        
+                    break;
+                case 501:
+                default:
+    <span>Internal Server Error</span>                
+                    break;
+            }
+        }
+        else
+        {
+    <span>Internal Server Error</span>
+        }
+    }
+}

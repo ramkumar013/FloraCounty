@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace FC.WebApp
+namespace FC.WebApp.AppCode
 {
     public class FCMember : MembershipAccount
     {

@@ -1,7 +1,7 @@
 ﻿using ExtendedMongoMembership;
 using ExtendedMongoMembership.Services;
 
-namespace FC.WebApp
+namespace FC.WebApp.AppCode
 {
     public class DefaultUserProfileService : UserProfileServiceBase<FCMember>
     {
